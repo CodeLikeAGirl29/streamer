@@ -1,11 +1,9 @@
-import React, { Component } from "react";
+import React from "react";
 import { connect } from "react-redux";
+
 import { signIn, signOut } from "../actions";
 
-class GoogleAuth extends Component {
-	// state = { isSignedIn: null };
-	// removed above because we're using redux store instead of local state
-
+class GoogleAuth extends React.Component {
 	componentDidMount() {
 		window.gapi.load("client:auth2", () => {
 			window.gapi.client
@@ -17,7 +15,7 @@ class GoogleAuth extends Component {
 				})
 				.then(() => {
 					this.auth = window.gapi.auth2.getAuthInstance();
-					// this.setState({ isSignedIn: this.auth.isSignedIn.get() });
+
 					this.onAuthChange(this.auth.isSignedIn.get());
 					this.auth.isSignedIn.listen(this.onAuthChange);
 				});
@@ -25,7 +23,6 @@ class GoogleAuth extends Component {
 	}
 
 	onAuthChange = (isSignedIn) => {
-		// this.setState({ isSignedIn: this.auth.isSignedIn.get() });
 		if (isSignedIn) {
 			this.props.signIn(this.auth.currentUser.get().getId());
 		} else {
