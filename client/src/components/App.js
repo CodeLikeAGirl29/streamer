@@ -9,7 +9,7 @@ import StreamShow from "./streams/StreamShow";
 import Header from "./Header";
 import history from "../history";
 
-const App = () => {
+const StreamsApp = () => {
 	return (
 		<div className='ui container'>
 			<Router history={history}>
@@ -28,4 +28,4 @@ const App = () => {
 	);
 };
 
-export default App;
+export default StreamsApp;
