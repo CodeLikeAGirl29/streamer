@@ -1,14 +1,22 @@
 # Streamer
 
-Built from the ground-up - a sort of Twitch.tv clone for streaming user recorded video. Implemented Google
-Auth2 for users to login and log out. I also used Redux.
-
 Tech Stack:
-
 ![React icon](https://camo.githubusercontent.com/67a01fa7cf337616274f39c070a11638f2e65720e414ef55b8dd3f9c2a803b2a/68747470733a2f2f696d672e736869656c64732e696f2f7374617469632f76313f7374796c653d666f722d7468652d6261646765266d6573736167653d526561637426636f6c6f723d323232323232266c6f676f3d5265616374266c6f676f436f6c6f723d363144414642266c6162656c3d)
 ![Redux
 icon](https://camo.githubusercontent.com/3a2650b6854cb790e3af41a1cefa87df32efc07aad12d0c0f128a7fbc5998ac3/68747470733a2f2f696d672e736869656c64732e696f2f7374617469632f76313f7374796c653d666f722d7468652d6261646765266d6573736167653d526564757826636f6c6f723d373634414243266c6f676f3d5265647578266c6f676f436f6c6f723d464646464646266c6162656c3d)
 ![Auth](https://camo.githubusercontent.com/1aee41a972c4b835919e8bb65b46c8fdad0223753bb006c42d11b0e3c9b3f37f/68747470733a2f2f696d672e736869656c64732e696f2f7374617469632f76313f7374796c653d666f722d7468652d6261646765266d6573736167653d417574683026636f6c6f723d454235343234266c6f676f3d4175746830266c6f676f436f6c6f723d464646464646266c6162656c3d)
+
+> streamer-app: CRUD operations in React and Redux.
+
+Points of interest:
+
+- Navigation using react-router-dom.
+- Custom history object for React Router, in order to make history accessible to the entire application. Mostly implemented for programmatic navigation inside Action Creators.
+- Modal window implementation using React Portals.
+- Managing forms using redux-form.
+- Authentication using Google API OAuth2.
+- Fake Restful API using json-server.
+- RTMP Media Server using node-media-server.
 
 ---
 

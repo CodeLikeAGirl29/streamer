@@ -33,11 +33,11 @@ class StreamForm extends React.Component {
 				onSubmit={this.props.handleSubmit(this.onSubmit)}
 				className='ui form error'
 			>
-				<Field name='title' component={this.renderInput} label='Enter Title' />
+				<Field name='title' component={this.renderInput} label='Title' />
 				<Field
 					name='description'
 					component={this.renderInput}
-					label='Enter Description'
+					label='Description'
 				/>
 				<button className='ui button primary'>Submit</button>
 			</form>
@@ -49,11 +49,11 @@ const validate = (formValues) => {
 	const errors = {};
 
 	if (!formValues.title) {
-		errors.title = "You must enter a title";
+		errors.title = "You cannot leave title blank";
 	}
 
 	if (!formValues.description) {
-		errors.description = "You must enter a description";
+		errors.description = "You cannot leave description blank";
 	}
 
 	return errors;
